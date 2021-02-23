@@ -1,77 +1,105 @@
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Abstraction</title>
-<script language="javascript" type="text/javascript" th:src="@{/js/jquery.min.js}" src="../../js/jquery.min.js"></script>
-<script language="javascript" type="text/javascript" th:src="@{/js/viz.js}" src="../../js/viz.js"></script>
-<script language="javascript" type="text/javascript" th:src="@{/js/site.js}" src="../../js/site.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Abstraction</title>
+	<script language="javascript" type="text/javascript" th:src="@{/js/jquery.min.js}" src="../../js/jquery.min.js"></script>
+	<script language="javascript" type="text/javascript" th:src="@{/js/viz.js}" src="../../js/viz.js"></script>
+	<script language="javascript" type="text/javascript" th:src="@{/js/site.js}" src="../../js/site.js"></script>
+	<link rel="stylesheet" type="text/css" th:href="@{assets/css/style.css}">
 </head>
 	<body>
-		<style>
-			button {
-				margin: 4px;
-				cursor: pointer;
-				font-size: 70%; font-family; arial ,sans-serif;
-				margin-right: 5px
-			}
-		</style>
-		<h2>ATL - Abstraction</h2>
+		<h2>Strategy RV</h2>
 		<br>
 		<br>
 		<ul>
-			<li>Enter the model to tranform in the first text area.</li>
-			<li>Click the "Transform" button.</li>
-			<li>The must and may models will be generated if the input model is valid else errors would be displayed.</li>
-			<li>After that you can generate the model graphs</li>
+			<li>Enter the model to analyse in the first text area.</li>
+			<li>Click the "Extract" button.</li>
+			<li>...</li>
 		</ul>
 			<font color="red">[[${error}]]</font>
 			<table>
 				<tr>
-					<td>Model to transform : </td>
-					<td>Must Model</td>
-					<td>May Model</td>
+					<td>Model: </td>
+					<td></td>
 				</tr>
 				<tr>
 					<td>
-						<form action="#" th:action="@{/}" th:object="${transformBean}" method="post">
+						<form action="#" th:action="@{/extract}" th:object="${transformBean}" method="post">
 							<table>
 								<tr>
 									<td><textarea rows="24" cols="80" th:field="*{atlModel}" style="background-color: #eaeae1"></textarea></td>
-									<td><input type="submit" value="Transform" style="font-size: 120%" /></td>
+									<td><input type="submit" value="Extract" style="font-size: 120%" /></td>
+									<td><input type="checkbox" th:field="*{imperfectRecall}" id="imperfectRecall" name="imperfectRecall" value="imperfect recall" checked>
+									<label for="imperfectRecall"> imperfect recall</label><br/>
+									<input type="checkbox"  th:field="*{perfectInfo}" id="perfectInfo" name="perfectInfo" value="perfect info" checked>
+									<label for="perfectInfo"> perfect information</label></td>
 								</tr>
 							</table>
 						</form>
 					</td>
-					<td><textarea id="graphviz_data_must" rows="20" cols="80" width="100%" wrap="off" readonly style="background-color: #eaeae1">[[${transformBean.mustAtlModel}]]</textarea></td>
-					<td><textarea id="graphviz_data_may" rows="20" cols="80" width="100%" wrap="off" readonly style="background-color: #eaeae1">[[${transformBean.mayAtlModel}]]</textarea></td>
+					<td>
+						<div id="graphviz_svg_div" class="box"/>
+						<textarea id="graphviz_data" rows="20" cols="80" width="100%" wrap="off" style="display: none">[[${transformBean.dotAtlModel}]]</textarea>
+					</td>
 				</tr>
 				<tr>
 					<td>
-						&nbsp;
+						Sub-models:
+						<div class="box">
+							<ul>
+								<li class="fancyLi" th:if="${subModels == null || subModels.empty}">
+									No submodels found
+								</li>
+								<li class="fancyLi" th:each="subModel : ${subModels}" th:id="${subModel.id}" >
+									<span th:text="${subModel.id}"></span>
+									<script th:inline="javascript">
+										jQuery("#[[${subModel.id}]]").click(function(){
+											jQuery("#selectedJson").html([[${subModel.subJson}]]);
+											jQuery("#subModelFormula").html([[${subModel.subFormula}]]);
+											jQuery("#subModelViz").html("");
+											var data = [[${subModel.subDot}]];
+											var svg = Viz(data, "svg");
+											jQuery("#subModelViz").html(svg);
+										});
+									</script>
+									<!--<span th:text="${subModel.subDot}" style="display: none"></span>-->
+								</li>
+							</ul>
+						</div>
 					</td>
-					<td><textarea id="graphviz_data_must_mcmas" rows="20" cols="80" width="100%" wrap="off" readonly style="background-color: #eaeae1">[[${transformBean.mcmasMustAtlModel}]]</textarea></td>
-					<td><textarea id="graphviz_data_may_mcmas" rows="20" cols="80" width="100%" wrap="off" readonly style="background-color: #eaeae1">[[${transformBean.mcmasMayAtlModel}]]</textarea></td>
+					<td>
+						<span id="subModelFormula"></span>
+						<div class="box" id="subModelViz"/>
+					</td>
 				</tr>
 				<tr>
 					<td>
-						&nbsp;
+						<span id="selectedJson" style="display: none;"></span>
+						<textarea id="trace" rows="1" cols="80" style="background-color: #eaeae1"></textarea>
+						<button id="rvButton">Check</button>
+						<script  th:inline="javascript">
+							jQuery("#rvButton").click(function(e) {
+								e.preventDefault();
+								jQuery.ajax({
+									type: "POST",
+									url: "/rv",
+									data: {
+										subModel: $("#selectedJson").text(),
+										map: [[${transformBean.map}]],
+										atlModel: [[${transformBean.atlModel}]],
+										trace: $("#trace").val()
+									},
+									success: function(result) {
+										$("#rvResult").html(result);
+									}
+								});
+							});
+						</script>
 					</td>
-					<td><textarea id="graphviz_data_must_mcmas" rows="20" cols="80" width="100%" wrap="off" readonly style="background-color: #eaeae1">[[${transformBean.mcmasOutputMustAtlModel}]]</textarea></td>
-					<td><textarea id="graphviz_data_may_mcmas" rows="20" cols="80" width="100%" wrap="off" readonly style="background-color: #eaeae1">[[${transformBean.mcmasOutputMayAtlModel}]]</textarea></td>
-				</tr>
-				<tr>
-					<td><button id="generate_btn" style="font-size: 120%">Generate Graph</button></td>
-					<td><button id="must_generate_btn" style="font-size: 120%">Generate Graph</button></td>
-					<td><button id="may_generate_btn" style="font-size: 120%">Generate Graph</button></td>
-				</tr>
-				<tr>
-					<td><div id="graphviz_svg_div" /></td>
-					<td><div id="must_graphviz_svg_div" /></td>
-					<td><div id="may_graphviz_svg_div" /></td>
+					<td id="rvResult">
+					</td>
 				</tr>
 			</table>
-		<textarea id="graphviz_data" rows="20" cols="80" width="100%" wrap="off" style="display: none">[[${transformBean.dotAtlModel}]]</textarea>
-		<textarea id="must_graphviz_data" rows="20" cols="80" width="100%" wrap="off" style="display: none">[[${transformBean.dotMustAtlModel}]]</textarea>
-		<textarea id="may_graphviz_data" rows="20" cols="80" width="100%" wrap="off" style="display: none">[[${transformBean.dotMayAtlModel}]]</textarea>
-	</body>
+		</body>
 </html>

@@ -1,289 +1,323 @@
 {
    "states": [
       {
-         "name": "sI",
-         "labels": [
-            "p",
-            "q"
-         ],
+         "name": "s0",
          "initial" : true
       },
       {
-         "name": "s1",
-         "labels": [
-            "b"
-         ]
+         "name": "o"
       },
       {
-         "name": "s2",
-         "labels": [
-            "b"
-         ]
+         "name": "s01"
+      },
+      {
+         "name": "s02"
+      },
+      {
+         "name": "s03"
+      },
+      {
+         "name": "e"
+      },
+      {
+         "name": "s1"
+      },
+      {
+         "name": "s2"
       },
       {
          "name": "s3"
       },
       {
-         "name": "s4",
-         "labels": [
-            "d"
-         ]
+         "name": "e1"
       },
       {
-         "name": "s5"
-      },
-      {
-         "name": "s6"
-      },
-      {
-         "name": "s7"
+         "name": "e2"
       }
    ],
    "agents": [
       {
-         "name": "Train1",
+         "name": "Rover",
          "actions": [
+            "ca",
+            "cm",
+            "cw",
+            "finish",
             "i",
-            "l",
-            "r"
+            "L",
+            "R",
+            "mp"
          ],
          "indistinguishableStates": [
             [
-               "s1",
-               "s2"
-            ],
-            [
-               "s5",
-               "s6"
+               "s01",
+               "s02",
+               "s03"
             ]
          ]
       },
       {
-         "name": "Train2",
+         "name": "Checker",
          "actions": [
-            "i",
-            "l",
-            "r",
-            "s"
-         ]
-      },
-      {
-         "name": "Controller",
-         "actions": [
-            "a1",
-            "a2",
-            "a3",
-            "a4",
-            "a5",
-            "a6",
-            "a",
-            "e",
-            "o"
-         ],
-         "indistinguishableStates": [
-            [
-               "s2",
-               "s3"
-            ]
+            "ok",
+            "notok",
+            "i"
          ]
       }
    ],
    "transitions": [
       {
-         "fromState": "sI",
+         "fromState": "s0",
+         "toState": "o",
+         "agentActions": [
+            [
+               {
+                  "agent": "Rover",
+                  "action": "finish"
+               },
+               {
+                  "agent": "Checker",
+                  "action": "i"
+               }
+            ]
+         ]
+      },
+      {
+         "fromState": "s0",
+         "toState": "s01",
+         "agentActions": [
+            [
+               {
+                  "agent": "Rover",
+                  "action": "ca"
+               },
+               {
+                  "agent": "Checker",
+                  "action": "i"
+               }
+            ]
+         ]
+      },
+      {
+         "fromState": "s01",
+         "toState": "s0",
+         "agentActions": [
+            [
+               {
+                  "agent": "Rover",
+                  "action": "i"
+               },
+               {
+                  "agent": "Checker",
+                  "action": "ok"
+               }
+            ]
+         ]
+      },
+      {
+         "fromState": "s0",
+         "toState": "s02",
+         "agentActions": [
+            [
+               {
+                  "agent": "Rover",
+                  "action": "cm"
+               },
+               {
+                  "agent": "Checker",
+                  "action": "i"
+               }
+            ]
+         ]
+      },
+      {
+         "fromState": "s02",
+         "toState": "s0",
+         "agentActions": [
+            [
+               {
+                  "agent": "Rover",
+                  "action": "i"
+               },
+               {
+                  "agent": "Checker",
+                  "action": "ok"
+               }
+            ]
+         ]
+      },
+      {
+         "fromState": "s0",
+         "toState": "s03",
+         "agentActions": [
+            [
+               {
+                  "agent": "Rover",
+                  "action": "cw"
+               },
+               {
+                  "agent": "Checker",
+                  "action": "i"
+               }
+            ]
+         ]
+      },
+      {
+         "fromState": "s03",
+         "toState": "s0",
+         "agentActions": [
+            [
+               {
+                  "agent": "Rover",
+                  "action": "i"
+               },
+               {
+                  "agent": "Checker",
+                  "action": "ok"
+               }
+            ]
+         ]
+      },
+      {
+         "fromState": "s01",
+         "toState": "e",
+         "agentActions": [
+            [
+               {
+                  "agent": "Rover",
+                  "action": "i"
+               },
+               {
+                  "agent": "Checker",
+                  "action": "notok"
+               }
+            ]
+         ]
+      },
+      {
+         "fromState": "s02",
+         "toState": "e",
+         "agentActions": [
+            [
+               {
+                  "agent": "Rover",
+                  "action": "i"
+               },
+               {
+                  "agent": "Checker",
+                  "action": "notok"
+               }
+            ]
+         ]
+      },
+      {
+         "fromState": "s03",
+         "toState": "e",
+         "agentActions": [
+            [
+               {
+                  "agent": "Rover",
+                  "action": "i"
+               },
+               {
+                  "agent": "Checker",
+                  "action": "notok"
+               }
+            ]
+         ]
+      },
+      {
+         "fromState": "o",
          "toState": "s1",
          "agentActions": [
             [
                {
-                  "agent": "Train1",
-                  "action": "l"
+                  "agent": "Rover",
+                  "action": "L"
                },
                {
-                  "agent": "Train2",
-                  "action": "s"
-               },
-               {
-                  "agent": "Controller",
-                  "action": "a1"
+                  "agent": "Checker",
+                  "action": "i"
                }
             ]
          ]
       },
       {
-         "fromState": "sI",
-         "toState": "s2",
+         "fromState": "s1",
+         "toState": "o",
          "agentActions": [
             [
                {
-                  "agent": "Train1",
-                  "action": "l"
+                  "agent": "Rover",
+                  "action": "R"
                },
                {
-                  "agent": "Train2",
-                  "action": "l"
-               },
-               {
-                  "agent": "Controller",
-                  "action": "a2"
+                  "agent": "Checker",
+                  "action": "i"
                }
             ]
          ]
       },
       {
-         "fromState": "sI",
+         "fromState": "o",
          "toState": "s3",
          "agentActions": [
             [
                {
-                  "agent": "Train1",
-                  "action": "r"
+                  "agent": "Rover",
+                  "action": "R"
                },
                {
-                  "agent": "Train2",
-                  "action": "l"
-               },
-               {
-                  "agent": "Controller",
-                  "action": "a3"
+                  "agent": "Checker",
+                  "action": "i"
                }
             ]
          ]
       },
       {
-         "fromState": "sI",
-         "toState": "s5",
+         "fromState": "s3",
+         "toState": "o",
          "agentActions": [
             [
                {
-                  "agent": "Train1",
-                  "action": "r"
+                  "agent": "Rover",
+                  "action": "L"
                },
                {
-                  "agent": "Train2",
-                  "action": "s"
-               },
-               {
-                  "agent": "Controller",
-                  "action": "a4"
-               }
-            ]
-         ]
-      },
-      {
-         "fromState": "sI",
-         "toState": "s6",
-         "agentActions": [
-            [
-               {
-                  "agent": "Train1",
-                  "action": "l"
-               },
-               {
-                  "agent": "Train2",
-                  "action": "r"
-               },
-               {
-                  "agent": "Controller",
-                  "action": "a5"
-               }
-            ]
-         ]
-      },
-      {
-         "fromState": "sI",
-         "toState": "sI",
-         "defaultTransition": true,
-         "multipleAgentActions" : [
-            {
-               "agent": "Train1",
-               "actions" : ["l", "r"]
-            },
-            {
-               "agent": "Train2",
-               "actions" : ["l", "r", "s"]
-            },
-            {
-               "agent": "Controller",
-               "actions" : ["a1", "a2", "a3", "a4", "a5", "a6", "a", "e", "o"]
-            }
-         ]
-      },
-      {
-         "fromState": "sI",
-         "toState": "s7",
-         "agentActions": [
-            [
-               {
-                  "agent": "Train1",
-                  "action": "r"
-               },
-               {
-                  "agent": "Train2",
-                  "action": "r"
-               },
-               {
-                  "agent": "Controller",
-                  "action": "a6"
+                  "agent": "Checker",
+                  "action": "i"
                }
             ]
          ]
       },
       {
          "fromState": "s1",
-         "toState": "sI",
+         "toState": "s2",
          "agentActions": [
             [
                {
-                  "agent": "Train1",
-                  "action": "i"
+                  "agent": "Rover",
+                  "action": "mp"
                },
                {
-                  "agent": "Train2",
+                  "agent": "Checker",
                   "action": "i"
-               },
-               {
-                  "agent": "Controller",
-                  "action": "a"
-               }
-            ]
-         ]
-      },
-      {
-         "fromState": "s1",
-         "toState": "s4",
-         "agentActions": [
-            [
-               {
-                  "agent": "Train1",
-                  "action": "i"
-               },
-               {
-                  "agent": "Train2",
-                  "action": "i"
-               },
-               {
-                  "agent": "Controller",
-                  "action": "o"
                }
             ]
          ]
       },
       {
          "fromState": "s2",
-         "toState": "s4",
+         "toState": "s1",
          "agentActions": [
             [
                {
-                  "agent": "Train1",
-                  "action": "i"
+                  "agent": "Rover",
+                  "action": "L"
                },
                {
-                  "agent": "Train2",
+                  "agent": "Checker",
                   "action": "i"
-               },
-               {
-                  "agent": "Controller",
-                  "action": "o"
                }
             ]
          ]
@@ -294,210 +328,131 @@
          "agentActions": [
             [
                {
-                  "agent": "Train1",
-                  "action": "i"
+                  "agent": "Rover",
+                  "action": "mp"
                },
                {
-                  "agent": "Train2",
+                  "agent": "Checker",
                   "action": "i"
+               }
+            ]
+         ]
+      },
+      {
+         "fromState": "s2",
+         "toState": "s3",
+         "agentActions": [
+            [
+               {
+                  "agent": "Rover",
+                  "action": "R"
                },
                {
-                  "agent": "Controller",
-                  "action": "e"
+                  "agent": "Checker",
+                  "action": "i"
+               }
+            ]
+         ]
+      },
+      {
+         "fromState": "s1",
+         "toState": "e1",
+         "agentActions": [
+            [
+               {
+                  "agent": "Rover",
+                  "action": "L"
+               },
+               {
+                  "agent": "Checker",
+                  "action": "i"
                }
             ]
          ]
       },
       {
          "fromState": "s3",
-         "toState": "s4",
+         "toState": "e2",
          "agentActions": [
             [
                {
-                  "agent": "Train1",
-                  "action": "i"
+                  "agent": "Rover",
+                  "action": "R"
                },
                {
-                  "agent": "Train2",
+                  "agent": "Checker",
                   "action": "i"
-               },
-               {
-                  "agent": "Controller",
-                  "action": "o"
                }
             ]
          ]
       },
       {
-         "fromState": "s4",
-         "toState": "s4",
+         "fromState": "e",
+         "toState": "e",
          "defaultTransition": true,
          "multipleAgentActions" : [
             {
-               "agent": "Train1",
-               "actions" : ["l", "r"]
+               "agent": "Rover",
+               "actions" : ["ca", "cm", "cw", "finish", "i", "L", "R", "mp"]
             },
             {
-               "agent": "Train2",
-               "actions" : ["l", "r", "s"]
-            },
-            {
-               "agent": "Controller",
-               "actions" : ["a1", "a2", "a3", "a4", "a5", "a6", "a", "e", "o"]
+               "agent": "Checker",
+               "actions" : ["ok", "notok", "i"]
             }
          ]
       },
       {
-         "fromState": "s5",
-         "toState": "sI",
-         "agentActions": [
-            [
-               {
-                  "agent": "Train1",
-                  "action": "i"
-               },
-               {
-                  "agent": "Train2",
-                  "action": "i"
-               },
-               {
-                  "agent": "Controller",
-                  "action": "a"
-               }
-            ]
+         "fromState": "e1",
+         "toState": "e1",
+         "defaultTransition": true,
+         "multipleAgentActions" : [
+            {
+               "agent": "Rover",
+               "actions" : ["ca", "cm", "cw", "finish", "i", "L", "R", "mp"]
+            },
+            {
+               "agent": "Checker",
+               "actions" : ["ok", "notok", "i"]
+            }
          ]
       },
       {
-         "fromState": "s5",
-         "toState": "s4",
-         "agentActions": [
-            [
-               {
-                  "agent": "Train1",
-                  "action": "i"
-               },
-               {
-                  "agent": "Train2",
-                  "action": "i"
-               },
-               {
-                  "agent": "Controller",
-                  "action": "o"
-               }
-            ]
-         ]
-      },
-      {
-         "fromState": "s6",
-         "toState": "sI",
-         "agentActions": [
-            [
-               {
-                  "agent": "Train1",
-                  "action": "i"
-               },
-               {
-                  "agent": "Train2",
-                  "action": "i"
-               },
-               {
-                  "agent": "Controller",
-                  "action": "a"
-               }
-            ]
-         ]
-      },
-      {
-         "fromState": "s6",
-         "toState": "s4",
-         "agentActions": [
-            [
-               {
-                  "agent": "Train1",
-                  "action": "i"
-               },
-               {
-                  "agent": "Train2",
-                  "action": "i"
-               },
-               {
-                  "agent": "Controller",
-                  "action": "o"
-               }
-            ]
-         ]
-      },
-      {
-         "fromState": "s6",
-         "toState": "s5",
-         "agentActions": [
-            [
-               {
-                  "agent": "Train1",
-                  "action": "i"
-               },
-               {
-                  "agent": "Train2",
-                  "action": "i"
-               },
-               {
-                  "agent": "Controller",
-                  "action": "e"
-               }
-            ]
-         ]
-      },
-      {
-         "fromState": "s7",
-         "toState": "s4",
-         "agentActions": [
-            [
-               {
-                  "agent": "Train1",
-                  "action": "i"
-               },
-               {
-                  "agent": "Train2",
-                  "action": "i"
-               },
-               {
-                  "agent": "Controller",
-                  "action": "o"
-               }
-            ]
-         ]
-      },
-      {
-         "fromState": "s7",
-         "toState": "s6",
-         "agentActions": [
-            [
-               {
-                  "agent": "Train1",
-                  "action": "i"
-               },
-               {
-                  "agent": "Train2",
-                  "action": "i"
-               },
-               {
-                  "agent": "Controller",
-                  "action": "e"
-               }
-            ]
+         "fromState": "e2",
+         "toState": "e2",
+         "defaultTransition": true,
+         "multipleAgentActions" : [
+            {
+               "agent": "Rover",
+               "actions" : ["ca", "cm", "cw", "finish", "i", "L", "R", "mp"]
+            },
+            {
+               "agent": "Checker",
+               "actions" : ["ok", "notok", "i"]
+            }
          ]
       }
    ],
    "group": {
       "name": "g1",
       "agents": [
-         "Train1",
-         "Controller"
+         "Rover"
       ]
    },
-   "formula": {
-      "group": "g1",
-      "terms" : ["s4"],
-      "sub-formula": "F(s4)"
+   "formula" : {
+      "group" : "g1",
+      "terms" : ["s01","s02","s03","o"],
+      "ltl" : "F((Fs01 and Fs02 and Fs03) and (XF o))",
+      "operator" : "and",
+      "sub-formula" : {
+         "group" : "g1",
+         "terms" : ["s2"],
+         "ltl" : "F s2",
+         "operator" : "and",
+         "sub-formula" : {
+            "group" : "g1",
+            "terms" : ["o"],
+            "ltl" : "F o"
+         }
+      }
    }
 }

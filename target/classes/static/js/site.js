@@ -42,8 +42,9 @@ jQuery(document).ready(function () {
   });
 
   // Bind actions to form buttons.
-  generate_btn.click(UpdateGraphviz);
-  
+  //generate_btn.click(UpdateGraphviz);
+  //setTimeout(function(){  UpdateGraphviz(); }, 3000);
+ UpdateGraphviz();
   
 
   // Must
