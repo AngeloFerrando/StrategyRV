@@ -54,7 +54,7 @@
 								<li class="fancyLi" th:each="subModel : ${subModels}" th:id="${subModel.id}" >
 									<span th:text="${subModel.id}"></span>
 									<script th:inline="javascript">
-										jQuery("#[[${subModel.id}]]").click(function(){
+										jQuery("#" + [[${subModel.id}]]).click(function(){
 											jQuery("#selectedJson").html([[${subModel.subJson}]]);
 											jQuery("#subModelFormula").html([[${subModel.subFormula}]]);
 											jQuery("#subModelViz").html("");

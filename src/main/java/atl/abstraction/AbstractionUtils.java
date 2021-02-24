@@ -23,6 +23,7 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.util.FileCopyUtils;
 
 public class AbstractionUtils {
 
@@ -755,8 +756,13 @@ public class AbstractionUtils {
 
 	public static String readSampleFile() {
 		try {
-			File sampleFile = new ClassPathResource(MODEL_JSON_FILE_NAME).getFile();
-			return new String(FileUtils.readFileToByteArray(sampleFile));
+			//File sampleFile = new ClassPathResource(MODEL_JSON_FILE_NAME).getFile();
+			ClassPathResource cpr = new ClassPathResource(MODEL_JSON_FILE_NAME);
+
+			byte[] bdata = FileCopyUtils.copyToByteArray(cpr.getInputStream());
+			return new String(bdata, StandardCharsets.UTF_8);
+
+			//return new String(FileUtils.readFileToByteArray(sampleFile));
 		} catch (IOException ioe) {
 			logger.error("Error while trying to read the sample file.", ioe);
 		}

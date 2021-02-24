@@ -1,14 +1,14 @@
 package atl.abstraction.beans;
 
 public class SubModel {
-    private int id;
+    private String id;
     private String subJson;
     private String subFormula;
     private String subDot;
     private String modelJson;
     private String modeldot;
 
-    public SubModel(int id, String subJson, String subFormula, String subDot, String modelJson, String modeldot) {
+    public SubModel(String id, String subJson, String subFormula, String subDot, String modelJson, String modeldot) {
         this.id = id;
         this.subJson = subJson;
         this.subFormula = subFormula;
@@ -57,11 +57,11 @@ public class SubModel {
         this.modeldot = modeldot;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 }

@@ -3,6 +3,7 @@
 /media/angelo/WorkData/git/StrategyRV/StrategyRV/src/main/java/atl/abstraction/AbstractionUtils.java
 /media/angelo/WorkData/git/StrategyRV/StrategyRV/src/main/java/atl/abstraction/beans/Transition.java
 /media/angelo/WorkData/git/StrategyRV/StrategyRV/src/main/java/atl/abstraction/beans/Agent.java
+/media/angelo/WorkData/git/StrategyRV/StrategyRV/src/main/java/atl/abstraction/beans/SubModel.java
 /media/angelo/WorkData/git/StrategyRV/StrategyRV/src/main/java/atl/abstraction/beans/TransformBean.java
 /media/angelo/WorkData/git/StrategyRV/StrategyRV/src/main/java/atl/abstraction/beans/AtlModel.java
 /media/angelo/WorkData/git/StrategyRV/StrategyRV/src/main/java/atl/abstraction/beans/StateCluster.java

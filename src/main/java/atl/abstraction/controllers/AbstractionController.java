@@ -79,7 +79,7 @@ public class AbstractionController {
 				for (AtlModel m : subModelsir) {
 					subModels.add(
 							new SubModel(
-									i++,
+									"M" + (i++),
 									m.toString(),
 									m.getFormula().toString(),
 									AbstractionUtils.generateDotGraph(m),
@@ -92,7 +92,7 @@ public class AbstractionController {
 				for (AtlModel m : subModelsIR) {
 					subModels.add(
 							new SubModel(
-									i++,
+									"M" + (i++),
 									m.toString(),
 									m.getFormula().toString(),
 									AbstractionUtils.generateDotGraph(m),
