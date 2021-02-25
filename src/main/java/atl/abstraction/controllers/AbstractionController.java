@@ -67,8 +67,8 @@ public class AbstractionController {
 			if(!file.exists() && !file.mkdir()) {
 				throw new FileSystemException("./tmp/IR folder could not be created");
 			}
-			AbstractionUtils.mcmas = "/media/angelo/WorkData/mcmas-1.3.0";
-			Monitor.rv = "/media/angelo/WorkData/lamaconv-snapshot-2016-09-07";
+			AbstractionUtils.mcmas = System.getenv("mcmas_home");
+			Monitor.rv = System.getenv("lamaconv_home");
 
 			HashMap<String, String> mapAtomToFormula = new HashMap<>();
 
@@ -85,6 +85,7 @@ public class AbstractionController {
 									AbstractionUtils.generateDotGraph(m),
 									"",
 									""));
+
 				}
 			}
 			if(transformBean.getPerfectInfo()){
