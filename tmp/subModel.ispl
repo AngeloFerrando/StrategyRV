@@ -1,0 +1,191 @@
+
+Agent Environment
+	Vars :
+		sI : boolean;
+		sp : boolean;
+		s1 : boolean;
+		cp : boolean;
+		s4 : boolean;
+		rm : boolean;
+		oc : boolean;
+		atom0n : boolean;
+		atom0p : boolean;
+		atom1n : boolean;
+		atom1p : boolean;
+		atom2n : boolean;
+		atom2p : boolean;
+		s5 : boolean;
+		pl : boolean;
+		s6 : boolean;
+		rp : boolean;
+		ip : boolean;
+		s7 : boolean;
+		s8 : boolean;
+		pr : boolean;
+		e1 : boolean;
+		e2 : boolean;
+		sink : boolean;
+	end Vars
+	Actions = {};
+	Protocol :
+	end Protocol
+	Evolution :
+		sI = false and sp = false and s1 = true and cp = true  if sI = true and sp = true and s1 = false and cp = false and (Rover.Action = chk and Mechanic.Action = ca);
+		sI = false and sink = true and s4 = true and pr = true and s5 = true and s6 = true and s7 = true and s8 = true and ip = true and atom1p = true and e1 = true and cp = true and atom0p = true and e2 = true and atom2n = true and atom1n = true and atom0n = true and atom2p = true and oc = true and rm = true and pl = true and sp = true and rp = true and s1 = true  if sI = true and sp = true and sink = false and s4 = false and pr = false and s5 = false and s6 = false and s7 = false and s8 = false and sink = false and ip = false and atom1p = false and e1 = false and cp = false and atom0p = false and e2 = false and atom2n = false and atom1n = false and atom0n = false and atom2p = false and oc = false and sI = false and rm = false and pl = false and rp = false and s1 = false and atom0p = false and atom1p = false and (Mechanic.Action = cw and Rover.Action = chk);
+		sI = false and sink = true and s4 = true and pr = true and s5 = true and s6 = true and s7 = true and s8 = true and ip = true and atom1p = true and e1 = true and cp = true and atom0p = true and e2 = true and atom2n = true and atom1n = true and atom0n = true and atom2p = true and oc = true and rm = true and pl = true and sp = true and rp = true and s1 = true  if sI = true and sp = true and sink = false and s4 = false and pr = false and s5 = false and s6 = false and s7 = false and s8 = false and sink = false and ip = false and atom1p = false and e1 = false and cp = false and atom0p = false and e2 = false and atom2n = false and atom1n = false and atom0n = false and atom2p = false and oc = false and sI = false and rm = false and pl = false and rp = false and s1 = false and atom0p = false and atom1p = false and (Mechanic.Action = cm and Rover.Action = chk);
+		s1 = false and cp = false and e1 = true  if s1 = true and cp = true and e1 = false and (Rover.Action = i and Mechanic.Action = notok);
+		s1 = false and cp = false and s4 = true and rm = true and oc = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true  if s1 = true and cp = true and s4 = false and rm = false and oc = false and atom0n = false and atom0p = false and atom1n = false and atom1p = false and atom2n = false and atom2p = false and atom0n = false and atom0p = false and atom1n = false and atom1p = false and atom2n = false and atom2p = false and atom0n = false and atom0p = false and atom1n = false and atom1p = false and atom2n = false and atom2p = false and atom0p = false and atom1p = false and atom2p = false and (Rover.Action = i and Mechanic.Action = ok);
+		s4 = true and rm = true and oc = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true  if s4 = true and rm = true and oc = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0p = true and atom1p = true and atom2p = true and (Rover.Action = i and Mechanic.Action = i);
+		s4 = false and rm = false and oc = false and s6 = true and rp = true and ip = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true  if s4 = true and rm = true and oc = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0p = true and atom1p = true and atom2p = true and s6 = false and rp = false and ip = false and (Rover.Action = L and Mechanic.Action = i);
+		s4 = false and rm = false and oc = false and s7 = true and rp = true and ip = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true  if s4 = true and rm = true and oc = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0p = true and atom1p = true and atom2p = true and s7 = false and rp = false and ip = false and (Rover.Action = R and Mechanic.Action = i);
+		s6 = false and rp = false and ip = false and s4 = true and rm = true and oc = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true  if s6 = true and rp = true and ip = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0p = true and atom1p = true and atom2p = true and s4 = false and rm = false and oc = false and (Rover.Action = R and Mechanic.Action = i);
+		s7 = false and rp = false and ip = false and s4 = true and rm = true and oc = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true  if s7 = true and rp = true and ip = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0p = true and atom1p = true and atom2p = true and s4 = false and rm = false and oc = false and (Rover.Action = L and Mechanic.Action = i);
+		s6 = false and rp = false and ip = false and s5 = true and pl = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true  if s6 = true and rp = true and ip = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0p = true and atom1p = true and atom2p = true and s5 = false and pl = false and (Rover.Action = mp and Mechanic.Action = i);
+		s5 = false and pl = false and s6 = true and rp = true and ip = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true  if s5 = true and pl = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0p = true and atom1p = true and atom2p = true and s6 = false and rp = false and ip = false and (Rover.Action = i and Mechanic.Action = i);
+		s7 = false and rp = false and ip = false and s8 = true and pr = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true  if s7 = true and rp = true and ip = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0p = true and atom1p = true and atom2p = true and s8 = false and pr = false and (Rover.Action = mp and Mechanic.Action = i);
+		s8 = false and pr = false and s7 = true and rp = true and ip = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true  if s8 = true and pr = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0p = true and atom1p = true and atom2p = true and s7 = false and rp = false and ip = false and (Rover.Action = i and Mechanic.Action = i);
+		s6 = false and rp = false and ip = false and atom0n = false and atom0p = false and atom1n = false and atom1p = false and atom2n = false and atom2p = false and e2 = true  if s6 = true and rp = true and ip = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0p = true and atom1p = true and atom2p = true and e2 = false and (Rover.Action = L and Mechanic.Action = i);
+		s7 = false and rp = false and ip = false and atom0n = false and atom0p = false and atom1n = false and atom1p = false and atom2n = false and atom2p = false and e2 = true  if s7 = true and rp = true and ip = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0n = true and atom0p = true and atom1n = true and atom1p = true and atom2n = true and atom2p = true and atom0p = true and atom1p = true and atom2p = true and e2 = false and (Rover.Action = R and Mechanic.Action = i);
+		e1 = true  if e1 = true and ((Rover.Action = chk and Mechanic.Action = ok) or 
+					(Rover.Action = chk and Mechanic.Action = notok) or 
+					(Rover.Action = chk and Mechanic.Action = i) or 
+					(Rover.Action = chk and Mechanic.Action = ca) or 
+					(Rover.Action = chk and Mechanic.Action = cm) or 
+					(Rover.Action = chk and Mechanic.Action = cw) or 
+					(Rover.Action = i and Mechanic.Action = ok) or 
+					(Rover.Action = i and Mechanic.Action = notok) or 
+					(Rover.Action = i and Mechanic.Action = i) or 
+					(Rover.Action = i and Mechanic.Action = ca) or 
+					(Rover.Action = i and Mechanic.Action = cm) or 
+					(Rover.Action = i and Mechanic.Action = cw) or 
+					(Rover.Action = L and Mechanic.Action = ok) or 
+					(Rover.Action = L and Mechanic.Action = notok) or 
+					(Rover.Action = L and Mechanic.Action = i) or 
+					(Rover.Action = L and Mechanic.Action = ca) or 
+					(Rover.Action = L and Mechanic.Action = cm) or 
+					(Rover.Action = L and Mechanic.Action = cw) or 
+					(Rover.Action = R and Mechanic.Action = ok) or 
+					(Rover.Action = R and Mechanic.Action = notok) or 
+					(Rover.Action = R and Mechanic.Action = i) or 
+					(Rover.Action = R and Mechanic.Action = ca) or 
+					(Rover.Action = R and Mechanic.Action = cm) or 
+					(Rover.Action = R and Mechanic.Action = cw) or 
+					(Rover.Action = mp and Mechanic.Action = ok) or 
+					(Rover.Action = mp and Mechanic.Action = notok) or 
+					(Rover.Action = mp and Mechanic.Action = i) or 
+					(Rover.Action = mp and Mechanic.Action = ca) or 
+					(Rover.Action = mp and Mechanic.Action = cm) or 
+					(Rover.Action = mp and Mechanic.Action = cw));
+		e2 = true  if e2 = true and ((Rover.Action = chk and Mechanic.Action = ok) or 
+					(Rover.Action = chk and Mechanic.Action = notok) or 
+					(Rover.Action = chk and Mechanic.Action = i) or 
+					(Rover.Action = chk and Mechanic.Action = ca) or 
+					(Rover.Action = chk and Mechanic.Action = cm) or 
+					(Rover.Action = chk and Mechanic.Action = cw) or 
+					(Rover.Action = i and Mechanic.Action = ok) or 
+					(Rover.Action = i and Mechanic.Action = notok) or 
+					(Rover.Action = i and Mechanic.Action = i) or 
+					(Rover.Action = i and Mechanic.Action = ca) or 
+					(Rover.Action = i and Mechanic.Action = cm) or 
+					(Rover.Action = i and Mechanic.Action = cw) or 
+					(Rover.Action = L and Mechanic.Action = ok) or 
+					(Rover.Action = L and Mechanic.Action = notok) or 
+					(Rover.Action = L and Mechanic.Action = i) or 
+					(Rover.Action = L and Mechanic.Action = ca) or 
+					(Rover.Action = L and Mechanic.Action = cm) or 
+					(Rover.Action = L and Mechanic.Action = cw) or 
+					(Rover.Action = R and Mechanic.Action = ok) or 
+					(Rover.Action = R and Mechanic.Action = notok) or 
+					(Rover.Action = R and Mechanic.Action = i) or 
+					(Rover.Action = R and Mechanic.Action = ca) or 
+					(Rover.Action = R and Mechanic.Action = cm) or 
+					(Rover.Action = R and Mechanic.Action = cw) or 
+					(Rover.Action = mp and Mechanic.Action = ok) or 
+					(Rover.Action = mp and Mechanic.Action = notok) or 
+					(Rover.Action = mp and Mechanic.Action = i) or 
+					(Rover.Action = mp and Mechanic.Action = ca) or 
+					(Rover.Action = mp and Mechanic.Action = cm) or 
+					(Rover.Action = mp and Mechanic.Action = cw));
+	end Evolution
+end Agent
+Agent Rover
+	Lobsvars = {sI, sp, s1, cp, s4, rm, oc, atom0n, atom0p, atom1n, atom1p, atom2n, atom2p, s5, pl, s6, rp, ip, s7, s8, pr, e1, e2, sink};
+	Vars : 
+
+		play : boolean;
+	end Vars
+	Actions = {chk,i,L,R,mp};
+	Protocol : 
+		Environment.s4 = true and Environment.rm = true and Environment.oc = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0p = true and Environment.atom1p = true and Environment.atom2p = true : {i,L,R};
+		Environment.s5 = true and Environment.pl = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0p = true and Environment.atom1p = true and Environment.atom2p = true : {i};
+		Environment.s6 = true and Environment.rp = true and Environment.ip = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0p = true and Environment.atom1p = true and Environment.atom2p = true : {R,mp,L};
+		Environment.s7 = true and Environment.rp = true and Environment.ip = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0p = true and Environment.atom1p = true and Environment.atom2p = true : {L,mp,R};
+		Environment.s8 = true and Environment.pr = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0p = true and Environment.atom1p = true and Environment.atom2p = true : {i};
+		Environment.sI = true and Environment.sp = true : {chk};
+		Environment.e1 = true : {chk,i,L,R,mp};
+		Environment.e2 = true : {chk,i,L,R,mp};
+		Environment.s1 = true and Environment.cp = true : {i};
+	end Protocol
+	Evolution : 
+		play = true if play = true;
+	end Evolution
+end Agent
+Agent Mechanic
+	Lobsvars = {sI, sp, s1, cp, s4, rm, oc, atom0n, atom0p, atom1n, atom1p, atom2n, atom2p, s5, pl, s6, rp, ip, s7, s8, pr, e1, e2, sink};
+	Vars : 
+
+		play : boolean;
+	end Vars
+	Actions = {ok,notok,i,ca,cw,cm};
+	Protocol : 
+		Environment.s4 = true and Environment.rm = true and Environment.oc = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0p = true and Environment.atom1p = true and Environment.atom2p = true : {i};
+		Environment.s5 = true and Environment.pl = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0p = true and Environment.atom1p = true and Environment.atom2p = true : {i};
+		Environment.s6 = true and Environment.rp = true and Environment.ip = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0p = true and Environment.atom1p = true and Environment.atom2p = true : {i};
+		Environment.s7 = true and Environment.rp = true and Environment.ip = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0p = true and Environment.atom1p = true and Environment.atom2p = true : {i};
+		Environment.s8 = true and Environment.pr = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0n = true and Environment.atom0p = true and Environment.atom1n = true and Environment.atom1p = true and Environment.atom2n = true and Environment.atom2p = true and Environment.atom0p = true and Environment.atom1p = true and Environment.atom2p = true : {i};
+		Environment.sI = true and Environment.sp = true : {ca,cw,cm};
+		Environment.e1 = true : {ok,notok,i,ca,cm,cw};
+		Environment.e2 = true : {ok,notok,i,ca,cm,cw};
+		Environment.s1 = true and Environment.cp = true : {notok,ok};
+	end Protocol
+	Evolution : 
+		play = true if play = true;
+	end Evolution
+end Agent
+Evaluation
+	rm if (Environment.rm = true);
+	oc if (Environment.oc = true);
+	atom1p if (Environment.atom1p = true);
+	end Evaluation
+	InitStates
+		Environment.sI = false and 
+		Environment.s1 = false and 
+		Environment.s4 = false and 
+		Environment.s5 = false and 
+		Environment.s6 = false and 
+		Environment.s7 = false and 
+		Environment.s8 = false and 
+		Environment.e1 = false and 
+		Environment.e2 = true and 
+		Environment.pr = false and 
+		Environment.ip = false and 
+		Environment.atom1p = false and 
+		Environment.cp = false and 
+		Environment.atom0p = false and 
+		Environment.atom2n = false and 
+		Environment.atom1n = false and 
+		Environment.atom0n = false and 
+		Environment.atom2p = false and 
+		Environment.oc = false and 
+		Environment.rm = false and 
+		Environment.pl = false and 
+		Environment.sp = false and 
+		Environment.rp = false;
+	end InitStates
+Groups
+	g1={Rover,Mechanic};
+	g2={Rover};
+end Groups
+Formulae
+	<g2>F(((rm and oc) and atom1p));
+end Formulae

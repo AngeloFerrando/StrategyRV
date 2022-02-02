@@ -1,0 +1,315 @@
+
+Agent Environment
+	Vars :
+		s0 : boolean;
+		s1 : boolean;
+		s2 : boolean;
+		s3 : boolean;
+		s4 : boolean;
+		s5 : boolean;
+		s6 : boolean;
+		s7 : boolean;
+		s8 : boolean;
+		s9 : boolean;
+	end Vars
+	Actions = {};
+	Protocol :
+	end Protocol
+	Evolution :
+		s0 = false and s2 = true  if s0 = true and s2 = false and (a0.Action = act2_0 and a1.Action = act5_1 and a2.Action = act0_2 and a3.Action = act6_3 and a4.Action = act0_4);
+		s1 = true  if s1 = true and (a0.Action = act1_5 and a1.Action = act6_6 and a2.Action = act2_7 and a3.Action = act3_8 and a4.Action = act1_9);
+		s2 = false and s4 = true  if s2 = true and s4 = false and (a0.Action = act2_10 and a1.Action = act7_11 and a2.Action = act0_12 and a3.Action = act0_13 and a4.Action = act1_14);
+		s3 = false and s4 = true  if s3 = true and s4 = false and (a0.Action = act0_15 and a1.Action = act2_16 and a2.Action = act1_17 and a3.Action = act5_18 and a4.Action = act1_19);
+		s4 = false and s6 = true  if s4 = true and s6 = false and (a0.Action = act2_20 and a1.Action = act2_21 and a2.Action = act0_22 and a3.Action = act6_23 and a4.Action = act0_24);
+		s5 = false and s0 = true  if s5 = true and s0 = false and (a0.Action = act1_25 and a1.Action = act0_26 and a2.Action = act1_27 and a3.Action = act4_28 and a4.Action = act0_29);
+		s6 = false and s8 = true  if s6 = true and s8 = false and (a0.Action = act1_30 and a1.Action = act5_31 and a2.Action = act2_32 and a3.Action = act3_33 and a4.Action = act1_34);
+		s7 = true  if s7 = true and (a0.Action = act1_35 and a1.Action = act1_36 and a2.Action = act1_37 and a3.Action = act0_38 and a4.Action = act0_39);
+		s8 = false and s0 = true  if s8 = true and s0 = false and (a0.Action = act1_40 and a1.Action = act3_41 and a2.Action = act2_42 and a3.Action = act5_43 and a4.Action = act0_44);
+		s9 = false and s7 = true  if s9 = true and s7 = false and (a0.Action = act0_45 and a1.Action = act5_46 and a2.Action = act0_47 and a3.Action = act1_48 and a4.Action = act0_49);
+		s5 = false and s6 = true  if s5 = true and s6 = false and (a0.Action = act2_50 and a1.Action = act0_51 and a2.Action = act2_52 and a3.Action = act3_53 and a4.Action = act0_54);
+		s8 = false and s4 = true  if s8 = true and s4 = false and (a0.Action = act1_55 and a1.Action = act5_56 and a2.Action = act0_57 and a3.Action = act4_58 and a4.Action = act0_59);
+		s5 = false and s8 = true  if s5 = true and s8 = false and (a0.Action = act0_60 and a1.Action = act4_61 and a2.Action = act1_62 and a3.Action = act0_63 and a4.Action = act1_64);
+		s9 = false and s5 = true  if s9 = true and s5 = false and (a0.Action = act0_65 and a1.Action = act3_66 and a2.Action = act1_67 and a3.Action = act1_68 and a4.Action = act1_69);
+		s9 = false and s3 = true  if s9 = true and s3 = false and (a0.Action = act2_70 and a1.Action = act5_71 and a2.Action = act0_72 and a3.Action = act1_73 and a4.Action = act1_74);
+		s8 = false and s2 = true  if s8 = true and s2 = false and (a0.Action = act2_75 and a1.Action = act0_76 and a2.Action = act0_77 and a3.Action = act0_78 and a4.Action = act1_79);
+		s0 = false and s9 = true  if s0 = true and s9 = false and (a0.Action = act0_80 and a1.Action = act4_81 and a2.Action = act0_82 and a3.Action = act7_83 and a4.Action = act1_84);
+		s8 = false and s2 = true  if s8 = true and s2 = false and (a0.Action = act0_85 and a1.Action = act7_86 and a2.Action = act2_87 and a3.Action = act0_88 and a4.Action = act0_89);
+		s5 = false and s7 = true  if s5 = true and s7 = false and (a0.Action = act0_90 and a1.Action = act0_91 and a2.Action = act2_92 and a3.Action = act7_93 and a4.Action = act0_94);
+		s8 = false and s9 = true  if s8 = true and s9 = false and (a0.Action = act0_95 and a1.Action = act5_96 and a2.Action = act0_97 and a3.Action = act0_98 and a4.Action = act0_99);
+		s4 = false and s3 = true  if s4 = true and s3 = false and (a0.Action = act0_100 and a1.Action = act1_101 and a2.Action = act1_102 and a3.Action = act0_103 and a4.Action = act0_104);
+		s6 = false and s1 = true  if s6 = true and s1 = false and (a0.Action = act2_105 and a1.Action = act0_106 and a2.Action = act2_107 and a3.Action = act7_108 and a4.Action = act0_109);
+		s9 = false and s3 = true  if s9 = true and s3 = false and (a0.Action = act2_110 and a1.Action = act7_111 and a2.Action = act2_112 and a3.Action = act4_113 and a4.Action = act0_114);
+		s0 = false and s4 = true  if s0 = true and s4 = false and (a0.Action = act1_115 and a1.Action = act0_116 and a2.Action = act1_117 and a3.Action = act5_118 and a4.Action = act1_119);
+		s7 = false and s5 = true  if s7 = true and s5 = false and (a0.Action = act2_120 and a1.Action = act3_121 and a2.Action = act1_122 and a3.Action = act2_123 and a4.Action = act1_124);
+		s9 = false and s7 = true  if s9 = true and s7 = false and (a0.Action = act2_125 and a1.Action = act0_126 and a2.Action = act0_127 and a3.Action = act6_128 and a4.Action = act1_129);
+		s1 = false and s3 = true  if s1 = true and s3 = false and (a0.Action = act0_130 and a1.Action = act0_131 and a2.Action = act2_132 and a3.Action = act7_133 and a4.Action = act0_134);
+		s3 = false and s6 = true  if s3 = true and s6 = false and (a0.Action = act0_135 and a1.Action = act7_136 and a2.Action = act0_137 and a3.Action = act3_138 and a4.Action = act1_139);
+		s5 = false and s3 = true  if s5 = true and s3 = false and (a0.Action = act1_140 and a1.Action = act2_141 and a2.Action = act0_142 and a3.Action = act6_143 and a4.Action = act0_144);
+		s9 = false and s4 = true  if s9 = true and s4 = false and (a0.Action = act0_145 and a1.Action = act0_146 and a2.Action = act0_147 and a3.Action = act6_148 and a4.Action = act1_149);
+		s4 = false and s2 = true  if s4 = true and s2 = false and (a0.Action = act1_150 and a1.Action = act0_151 and a2.Action = act0_152 and a3.Action = act1_153 and a4.Action = act0_154);
+		s2 = false and s1 = true  if s2 = true and s1 = false and (a0.Action = act2_155 and a1.Action = act3_156 and a2.Action = act1_157 and a3.Action = act5_158 and a4.Action = act0_159);
+		s4 = false and s7 = true  if s4 = true and s7 = false and (a0.Action = act1_160 and a1.Action = act6_161 and a2.Action = act2_162 and a3.Action = act3_163 and a4.Action = act1_164);
+		s0 = false and s4 = true  if s0 = true and s4 = false and (a0.Action = act2_165 and a1.Action = act4_166 and a2.Action = act1_167 and a3.Action = act0_168 and a4.Action = act1_169);
+		s2 = false and s4 = true  if s2 = true and s4 = false and (a0.Action = act2_170 and a1.Action = act1_171 and a2.Action = act0_172 and a3.Action = act1_173 and a4.Action = act0_174);
+		s1 = false and s4 = true  if s1 = true and s4 = false and (a0.Action = act2_175 and a1.Action = act1_176 and a2.Action = act1_177 and a3.Action = act5_178 and a4.Action = act0_179);
+		s8 = false and s1 = true  if s8 = true and s1 = false and (a0.Action = act1_180 and a1.Action = act4_181 and a2.Action = act0_182 and a3.Action = act1_183 and a4.Action = act1_184);
+		s7 = false and s4 = true  if s7 = true and s4 = false and (a0.Action = act2_185 and a1.Action = act1_186 and a2.Action = act1_187 and a3.Action = act4_188 and a4.Action = act1_189);
+		s5 = false and s8 = true  if s5 = true and s8 = false and (a0.Action = act2_190 and a1.Action = act5_191 and a2.Action = act1_192 and a3.Action = act2_193 and a4.Action = act1_194);
+		s9 = false and s7 = true  if s9 = true and s7 = false and (a0.Action = act2_195 and a1.Action = act3_196 and a2.Action = act0_197 and a3.Action = act6_198 and a4.Action = act1_199);
+		s7 = false and s3 = true  if s7 = true and s3 = false and (a0.Action = act2_200 and a1.Action = act4_201 and a2.Action = act2_202 and a3.Action = act0_203 and a4.Action = act1_204);
+		s3 = false and s2 = true  if s3 = true and s2 = false and (a0.Action = act0_205 and a1.Action = act5_206 and a2.Action = act0_207 and a3.Action = act2_208 and a4.Action = act1_209);
+		s9 = false and s7 = true  if s9 = true and s7 = false and (a0.Action = act0_210 and a1.Action = act6_211 and a2.Action = act1_212 and a3.Action = act4_213 and a4.Action = act0_214);
+		s5 = false and s4 = true  if s5 = true and s4 = false and (a0.Action = act1_215 and a1.Action = act3_216 and a2.Action = act0_217 and a3.Action = act7_218 and a4.Action = act0_219);
+		s3 = false and s7 = true  if s3 = true and s7 = false and (a0.Action = act0_220 and a1.Action = act3_221 and a2.Action = act1_222 and a3.Action = act4_223 and a4.Action = act0_224);
+		s0 = false and s1 = true  if s0 = true and s1 = false and (a0.Action = act2_225 and a1.Action = act3_226 and a2.Action = act1_227 and a3.Action = act2_228 and a4.Action = act0_229);
+		s8 = false and s0 = true  if s8 = true and s0 = false and (a0.Action = act0_230 and a1.Action = act1_231 and a2.Action = act2_232 and a3.Action = act2_233 and a4.Action = act0_234);
+		s2 = false and s3 = true  if s2 = true and s3 = false and (a0.Action = act2_235 and a1.Action = act7_236 and a2.Action = act2_237 and a3.Action = act4_238 and a4.Action = act1_239);
+		s8 = false and s1 = true  if s8 = true and s1 = false and (a0.Action = act0_240 and a1.Action = act0_241 and a2.Action = act2_242 and a3.Action = act1_243 and a4.Action = act0_244);
+		s2 = false and s0 = true  if s2 = true and s0 = false and (a0.Action = act2_245 and a1.Action = act4_246 and a2.Action = act2_247 and a3.Action = act0_248 and a4.Action = act0_249);
+		s3 = false and s1 = true  if s3 = true and s1 = false and (a0.Action = act0_250 and a1.Action = act2_251 and a2.Action = act0_252 and a3.Action = act4_253 and a4.Action = act1_254);
+		s2 = false and s5 = true  if s2 = true and s5 = false and (a0.Action = act2_255 and a1.Action = act2_256 and a2.Action = act1_257 and a3.Action = act5_258 and a4.Action = act1_259);
+		s0 = false and s2 = true  if s0 = true and s2 = false and (a0.Action = act1_260 and a1.Action = act1_261 and a2.Action = act1_262 and a3.Action = act0_263 and a4.Action = act0_264);
+		s1 = false and s3 = true  if s1 = true and s3 = false and (a0.Action = act1_265 and a1.Action = act4_266 and a2.Action = act0_267 and a3.Action = act7_268 and a4.Action = act1_269);
+		s1 = false and s9 = true  if s1 = true and s9 = false and (a0.Action = act1_270 and a1.Action = act6_271 and a2.Action = act0_272 and a3.Action = act0_273 and a4.Action = act0_274);
+		s5 = false and s2 = true  if s5 = true and s2 = false and (a0.Action = act1_275 and a1.Action = act5_276 and a2.Action = act2_277 and a3.Action = act7_278 and a4.Action = act0_279);
+		s5 = false and s2 = true  if s5 = true and s2 = false and (a0.Action = act0_280 and a1.Action = act4_281 and a2.Action = act1_282 and a3.Action = act1_283 and a4.Action = act0_284);
+		s8 = false and s3 = true  if s8 = true and s3 = false and (a0.Action = act2_285 and a1.Action = act6_286 and a2.Action = act2_287 and a3.Action = act5_288 and a4.Action = act1_289);
+		s6 = false and s2 = true  if s6 = true and s2 = false and (a0.Action = act1_290 and a1.Action = act6_291 and a2.Action = act2_292 and a3.Action = act3_293 and a4.Action = act0_294);
+		s3 = false and s7 = true  if s3 = true and s7 = false and (a0.Action = act1_295 and a1.Action = act0_296 and a2.Action = act1_297 and a3.Action = act3_298 and a4.Action = act1_299);
+		s0 = false and s6 = true  if s0 = true and s6 = false and (a0.Action = act2_300 and a1.Action = act2_301 and a2.Action = act2_302 and a3.Action = act0_303 and a4.Action = act1_304);
+		s8 = false and s5 = true  if s8 = true and s5 = false and (a0.Action = act1_305 and a1.Action = act3_306 and a2.Action = act2_307 and a3.Action = act2_308 and a4.Action = act1_309);
+		s8 = false and s9 = true  if s8 = true and s9 = false and (a0.Action = act2_310 and a1.Action = act4_311 and a2.Action = act2_312 and a3.Action = act6_313 and a4.Action = act1_314);
+		s0 = false and s3 = true  if s0 = true and s3 = false and (a0.Action = act0_315 and a1.Action = act3_316 and a2.Action = act2_317 and a3.Action = act6_318 and a4.Action = act0_319);
+		s3 = false and s6 = true  if s3 = true and s6 = false and (a0.Action = act2_320 and a1.Action = act5_321 and a2.Action = act1_322 and a3.Action = act2_323 and a4.Action = act0_324);
+		s3 = false and s8 = true  if s3 = true and s8 = false and (a0.Action = act0_325 and a1.Action = act6_326 and a2.Action = act2_327 and a3.Action = act6_328 and a4.Action = act0_329);
+		s5 = true  if s5 = true and (a0.Action = act2_330 and a1.Action = act1_331 and a2.Action = act2_332 and a3.Action = act7_333 and a4.Action = act0_334);
+		s6 = false and s8 = true  if s6 = true and s8 = false and (a0.Action = act1_335 and a1.Action = act5_336 and a2.Action = act0_337 and a3.Action = act2_338 and a4.Action = act0_339);
+		s0 = false and s5 = true  if s0 = true and s5 = false and (a0.Action = act1_340 and a1.Action = act1_341 and a2.Action = act1_342 and a3.Action = act0_343 and a4.Action = act0_344);
+		s3 = true  if s3 = true and (a0.Action = act1_345 and a1.Action = act4_346 and a2.Action = act2_347 and a3.Action = act7_348 and a4.Action = act1_349);
+		s9 = false and s4 = true  if s9 = true and s4 = false and (a0.Action = act1_350 and a1.Action = act5_351 and a2.Action = act0_352 and a3.Action = act6_353 and a4.Action = act0_354);
+		s0 = false and s3 = true  if s0 = true and s3 = false and (a0.Action = act2_355 and a1.Action = act7_356 and a2.Action = act1_357 and a3.Action = act6_358 and a4.Action = act0_359);
+		s6 = false and s2 = true  if s6 = true and s2 = false and (a0.Action = act1_360 and a1.Action = act2_361 and a2.Action = act2_362 and a3.Action = act3_363 and a4.Action = act0_364);
+		s5 = false and s7 = true  if s5 = true and s7 = false and (a0.Action = act2_365 and a1.Action = act1_366 and a2.Action = act2_367 and a3.Action = act2_368 and a4.Action = act0_369);
+		s6 = false and s5 = true  if s6 = true and s5 = false and (a0.Action = act0_370 and a1.Action = act1_371 and a2.Action = act2_372 and a3.Action = act6_373 and a4.Action = act1_374);
+		s5 = false and s8 = true  if s5 = true and s8 = false and (a0.Action = act1_375 and a1.Action = act2_376 and a2.Action = act0_377 and a3.Action = act1_378 and a4.Action = act1_379);
+		s9 = false and s0 = true  if s9 = true and s0 = false and (a0.Action = act0_380 and a1.Action = act0_381 and a2.Action = act0_382 and a3.Action = act5_383 and a4.Action = act1_384);
+		s8 = false and s9 = true  if s8 = true and s9 = false and (a0.Action = act0_385 and a1.Action = act3_386 and a2.Action = act0_387 and a3.Action = act7_388 and a4.Action = act0_389);
+		s0 = true  if s0 = true and (a0.Action = act2_390 and a1.Action = act3_391 and a2.Action = act2_392 and a3.Action = act3_393 and a4.Action = act1_394);
+	end Evolution
+end Agent
+Agent a0
+	Lobsvars = {s0, s1, s2, s3, s4, s5, s6, s9};
+	Vars : 
+		imp_s8_s7: boolean;
+		play : boolean;
+	end Vars
+	Actions = {act2_0,act1_5,act2_10,act0_15,act2_20,act1_25,act1_30,act1_35,act1_40,act0_45,act2_50,act1_55,act0_60,act0_65,act2_70,act2_75,act0_80,act0_85,act0_90,act0_95,act0_100,act2_105,act2_110,act1_115,act2_120,act2_125,act0_130,act0_135,act1_140,act0_145,act1_150,act2_155,act1_160,act2_165,act2_170,act2_175,act1_180,act2_185,act2_190,act2_195,act2_200,act0_205,act0_210,act1_215,act0_220,act2_225,act0_230,act2_235,act0_240,act2_245,act0_250,act2_255,act1_260,act1_265,act1_270,act1_275,act0_280,act2_285,act1_290,act1_295,act2_300,act1_305,act2_310,act0_315,act2_320,act0_325,act2_330,act1_335,act1_340,act1_345,act1_350,act2_355,act1_360,act2_365,act0_370,act1_375,act0_380,act0_385,act2_390};
+	Protocol : 
+		Environment.s3 = true : {act0_15,act0_135,act0_205,act0_220,act0_250,act1_295,act2_320,act0_325,act1_345};
+		Environment.s4 = true : {act2_20,act0_100,act1_150,act1_160};
+		Environment.s5 = true : {act1_25,act2_50,act0_60,act0_90,act1_140,act2_190,act1_215,act1_275,act0_280,act2_330,act2_365,act1_375};
+		Environment.s6 = true : {act1_30,act2_105,act1_290,act1_335,act1_360,act0_370};
+		Environment.s9 = true : {act0_45,act0_65,act2_70,act2_110,act2_125,act0_145,act2_195,act0_210,act1_350,act0_380};
+		imp_s8_s7 = true : {act1_35,act1_40,act1_55,act2_75,act0_85,act0_95,act2_120,act1_180,act2_185,act2_200,act0_230,act0_240,act2_285,act1_305,act2_310,act0_385};
+		Environment.s0 = true : {act2_0,act0_80,act1_115,act2_165,act2_225,act1_260,act2_300,act0_315,act1_340,act2_355,act2_390};
+		Environment.s1 = true : {act1_5,act0_130,act2_175,act1_265,act1_270};
+		Environment.s2 = true : {act2_10,act2_155,act2_170,act2_235,act2_245,act2_255};
+	end Protocol
+	Evolution : 
+		play = true if play = true;
+		(imp_s8_s7 = true ) if (Environment.s6 = true )and (imp_s8_s7 = false )and (a0.Action = act1_30 and a1.Action = act5_31 and a2.Action = act2_32 and a3.Action = act3_33 and a4.Action = act1_34);
+		(imp_s8_s7 = true ) if (imp_s8_s7 = true )and (a0.Action = act1_35 and a1.Action = act1_36 and a2.Action = act1_37 and a3.Action = act0_38 and a4.Action = act0_39);
+		(imp_s8_s7 = true ) if (Environment.s9 = true )and (imp_s8_s7 = false )and (a0.Action = act0_45 and a1.Action = act5_46 and a2.Action = act0_47 and a3.Action = act1_48 and a4.Action = act0_49);
+		(imp_s8_s7 = true ) if (Environment.s5 = true )and (imp_s8_s7 = false )and (a0.Action = act0_60 and a1.Action = act4_61 and a2.Action = act1_62 and a3.Action = act0_63 and a4.Action = act1_64);
+		(imp_s8_s7 = true ) if (Environment.s5 = true )and (imp_s8_s7 = false )and (a0.Action = act0_90 and a1.Action = act0_91 and a2.Action = act2_92 and a3.Action = act7_93 and a4.Action = act0_94);
+		(imp_s8_s7 = true ) if (Environment.s9 = true )and (imp_s8_s7 = false )and (a0.Action = act2_125 and a1.Action = act0_126 and a2.Action = act0_127 and a3.Action = act6_128 and a4.Action = act1_129);
+		(imp_s8_s7 = true ) if (Environment.s4 = true )and (imp_s8_s7 = false )and (a0.Action = act1_160 and a1.Action = act6_161 and a2.Action = act2_162 and a3.Action = act3_163 and a4.Action = act1_164);
+		(imp_s8_s7 = true ) if (Environment.s5 = true )and (imp_s8_s7 = false )and (a0.Action = act2_190 and a1.Action = act5_191 and a2.Action = act1_192 and a3.Action = act2_193 and a4.Action = act1_194);
+		(imp_s8_s7 = true ) if (Environment.s9 = true )and (imp_s8_s7 = false )and (a0.Action = act2_195 and a1.Action = act3_196 and a2.Action = act0_197 and a3.Action = act6_198 and a4.Action = act1_199);
+		(imp_s8_s7 = true ) if (Environment.s9 = true )and (imp_s8_s7 = false )and (a0.Action = act0_210 and a1.Action = act6_211 and a2.Action = act1_212 and a3.Action = act4_213 and a4.Action = act0_214);
+		(imp_s8_s7 = true ) if (Environment.s3 = true )and (imp_s8_s7 = false )and (a0.Action = act0_220 and a1.Action = act3_221 and a2.Action = act1_222 and a3.Action = act4_223 and a4.Action = act0_224);
+		(imp_s8_s7 = true ) if (Environment.s3 = true )and (imp_s8_s7 = false )and (a0.Action = act1_295 and a1.Action = act0_296 and a2.Action = act1_297 and a3.Action = act3_298 and a4.Action = act1_299);
+		(imp_s8_s7 = true ) if (Environment.s3 = true )and (imp_s8_s7 = false )and (a0.Action = act0_325 and a1.Action = act6_326 and a2.Action = act2_327 and a3.Action = act6_328 and a4.Action = act0_329);
+		(imp_s8_s7 = true ) if (Environment.s6 = true )and (imp_s8_s7 = false )and (a0.Action = act1_335 and a1.Action = act5_336 and a2.Action = act0_337 and a3.Action = act2_338 and a4.Action = act0_339);
+		(imp_s8_s7 = true ) if (Environment.s5 = true )and (imp_s8_s7 = false )and (a0.Action = act2_365 and a1.Action = act1_366 and a2.Action = act2_367 and a3.Action = act2_368 and a4.Action = act0_369);
+		(imp_s8_s7 = true ) if (Environment.s5 = true )and (imp_s8_s7 = false )and (a0.Action = act1_375 and a1.Action = act2_376 and a2.Action = act0_377 and a3.Action = act1_378 and a4.Action = act1_379);
+	end Evolution
+end Agent
+Agent a1
+	Lobsvars = {s1, s3, s4, s5, s6, s7, s8, s9};
+	Vars : 
+		imp_s0_s2: boolean;
+		play : boolean;
+	end Vars
+	Actions = {act5_1,act6_6,act7_11,act2_16,act2_21,act0_26,act5_31,act1_36,act3_41,act5_46,act0_51,act5_56,act4_61,act3_66,act5_71,act0_76,act4_81,act7_86,act0_91,act5_96,act1_101,act0_106,act7_111,act0_116,act3_121,act0_126,act0_131,act7_136,act2_141,act0_146,act0_151,act3_156,act6_161,act4_166,act1_171,act1_176,act4_181,act1_186,act5_191,act3_196,act4_201,act5_206,act6_211,act3_216,act3_221,act3_226,act1_231,act7_236,act0_241,act4_246,act2_251,act2_256,act1_261,act4_266,act6_271,act5_276,act4_281,act6_286,act6_291,act0_296,act2_301,act3_306,act4_311,act3_316,act5_321,act6_326,act1_331,act5_336,act1_341,act4_346,act5_351,act7_356,act2_361,act1_366,act1_371,act2_376,act0_381,act3_386,act3_391};
+	Protocol : 
+		Environment.s3 = true : {act2_16,act7_136,act5_206,act3_221,act2_251,act0_296,act5_321,act6_326,act4_346};
+		Environment.s4 = true : {act2_21,act1_101,act0_151,act6_161};
+		Environment.s5 = true : {act0_26,act0_51,act4_61,act0_91,act2_141,act5_191,act3_216,act5_276,act4_281,act1_331,act1_366,act2_376};
+		Environment.s6 = true : {act5_31,act0_106,act6_291,act5_336,act2_361,act1_371};
+		Environment.s7 = true : {act1_36,act3_121,act1_186,act4_201};
+		Environment.s8 = true : {act3_41,act5_56,act0_76,act7_86,act5_96,act4_181,act1_231,act0_241,act6_286,act3_306,act4_311,act3_386};
+		Environment.s9 = true : {act5_46,act3_66,act5_71,act7_111,act0_126,act0_146,act3_196,act6_211,act5_351,act0_381};
+		imp_s0_s2 = true : {act5_1,act7_11,act4_81,act0_116,act3_156,act4_166,act1_171,act3_226,act7_236,act4_246,act2_256,act1_261,act2_301,act3_316,act1_341,act7_356,act3_391};
+		Environment.s1 = true : {act6_6,act0_131,act1_176,act4_266,act6_271};
+	end Protocol
+	Evolution : 
+		play = true if play = true;
+		(imp_s0_s2 = true ) if (imp_s0_s2 = true )and (a0.Action = act2_0 and a1.Action = act5_1 and a2.Action = act0_2 and a3.Action = act6_3 and a4.Action = act0_4);
+		(imp_s0_s2 = true ) if (Environment.s5 = true )and (imp_s0_s2 = false )and (a0.Action = act1_25 and a1.Action = act0_26 and a2.Action = act1_27 and a3.Action = act4_28 and a4.Action = act0_29);
+		(imp_s0_s2 = true ) if (Environment.s8 = true )and (imp_s0_s2 = false )and (a0.Action = act1_40 and a1.Action = act3_41 and a2.Action = act2_42 and a3.Action = act5_43 and a4.Action = act0_44);
+		(imp_s0_s2 = true ) if (Environment.s8 = true )and (imp_s0_s2 = false )and (a0.Action = act2_75 and a1.Action = act0_76 and a2.Action = act0_77 and a3.Action = act0_78 and a4.Action = act1_79);
+		(imp_s0_s2 = true ) if (Environment.s8 = true )and (imp_s0_s2 = false )and (a0.Action = act0_85 and a1.Action = act7_86 and a2.Action = act2_87 and a3.Action = act0_88 and a4.Action = act0_89);
+		(imp_s0_s2 = true ) if (Environment.s4 = true )and (imp_s0_s2 = false )and (a0.Action = act1_150 and a1.Action = act0_151 and a2.Action = act0_152 and a3.Action = act1_153 and a4.Action = act0_154);
+		(imp_s0_s2 = true ) if (Environment.s3 = true )and (imp_s0_s2 = false )and (a0.Action = act0_205 and a1.Action = act5_206 and a2.Action = act0_207 and a3.Action = act2_208 and a4.Action = act1_209);
+		(imp_s0_s2 = true ) if (Environment.s8 = true )and (imp_s0_s2 = false )and (a0.Action = act0_230 and a1.Action = act1_231 and a2.Action = act2_232 and a3.Action = act2_233 and a4.Action = act0_234);
+		(imp_s0_s2 = true ) if (imp_s0_s2 = true )and (a0.Action = act2_245 and a1.Action = act4_246 and a2.Action = act2_247 and a3.Action = act0_248 and a4.Action = act0_249);
+		(imp_s0_s2 = true ) if (imp_s0_s2 = true )and (a0.Action = act1_260 and a1.Action = act1_261 and a2.Action = act1_262 and a3.Action = act0_263 and a4.Action = act0_264);
+		(imp_s0_s2 = true ) if (Environment.s5 = true )and (imp_s0_s2 = false )and (a0.Action = act1_275 and a1.Action = act5_276 and a2.Action = act2_277 and a3.Action = act7_278 and a4.Action = act0_279);
+		(imp_s0_s2 = true ) if (Environment.s5 = true )and (imp_s0_s2 = false )and (a0.Action = act0_280 and a1.Action = act4_281 and a2.Action = act1_282 and a3.Action = act1_283 and a4.Action = act0_284);
+		(imp_s0_s2 = true ) if (Environment.s6 = true )and (imp_s0_s2 = false )and (a0.Action = act1_290 and a1.Action = act6_291 and a2.Action = act2_292 and a3.Action = act3_293 and a4.Action = act0_294);
+		(imp_s0_s2 = true ) if (Environment.s6 = true )and (imp_s0_s2 = false )and (a0.Action = act1_360 and a1.Action = act2_361 and a2.Action = act2_362 and a3.Action = act3_363 and a4.Action = act0_364);
+		(imp_s0_s2 = true ) if (Environment.s9 = true )and (imp_s0_s2 = false )and (a0.Action = act0_380 and a1.Action = act0_381 and a2.Action = act0_382 and a3.Action = act5_383 and a4.Action = act1_384);
+		(imp_s0_s2 = true ) if (imp_s0_s2 = true )and (a0.Action = act2_390 and a1.Action = act3_391 and a2.Action = act2_392 and a3.Action = act3_393 and a4.Action = act1_394);
+	end Evolution
+end Agent
+Agent a2
+	Lobsvars = {s0, s2, s3, s4, s5, s7, s8, s9};
+	Vars : 
+		imp_s1_s6: boolean;
+		play : boolean;
+	end Vars
+	Actions = {act0_2,act2_7,act0_12,act1_17,act0_22,act1_27,act2_32,act1_37,act2_42,act0_47,act2_52,act0_57,act1_62,act1_67,act0_72,act0_77,act0_82,act2_87,act2_92,act0_97,act1_102,act2_107,act2_112,act1_117,act1_122,act0_127,act2_132,act0_137,act0_142,act0_147,act0_152,act1_157,act2_162,act1_167,act0_172,act1_177,act0_182,act1_187,act1_192,act0_197,act2_202,act0_207,act1_212,act0_217,act1_222,act1_227,act2_232,act2_237,act2_242,act2_247,act0_252,act1_257,act1_262,act0_267,act0_272,act2_277,act1_282,act2_287,act2_292,act1_297,act2_302,act2_307,act2_312,act2_317,act1_322,act2_327,act2_332,act0_337,act1_342,act2_347,act0_352,act1_357,act2_362,act2_367,act2_372,act0_377,act0_382,act0_387,act2_392};
+	Protocol : 
+		Environment.s3 = true : {act1_17,act0_137,act0_207,act1_222,act0_252,act1_297,act1_322,act2_327,act2_347};
+		Environment.s4 = true : {act0_22,act1_102,act0_152,act2_162};
+		Environment.s5 = true : {act1_27,act2_52,act1_62,act2_92,act0_142,act1_192,act0_217,act2_277,act1_282,act2_332,act2_367,act0_377};
+		Environment.s7 = true : {act1_37,act1_122,act1_187,act2_202};
+		imp_s1_s6 = true : {act2_7,act2_32,act2_107,act2_132,act1_177,act0_267,act0_272,act2_292,act0_337,act2_362,act2_372};
+		Environment.s8 = true : {act2_42,act0_57,act0_77,act2_87,act0_97,act0_182,act2_232,act2_242,act2_287,act2_307,act2_312,act0_387};
+		Environment.s9 = true : {act0_47,act1_67,act0_72,act2_112,act0_127,act0_147,act0_197,act1_212,act0_352,act0_382};
+		Environment.s0 = true : {act0_2,act0_82,act1_117,act1_167,act1_227,act1_262,act2_302,act2_317,act1_342,act1_357,act2_392};
+		Environment.s2 = true : {act0_12,act1_157,act0_172,act2_237,act2_247,act1_257};
+	end Protocol
+	Evolution : 
+		play = true if play = true;
+		(imp_s1_s6 = true ) if (imp_s1_s6 = true )and (a0.Action = act1_5 and a1.Action = act6_6 and a2.Action = act2_7 and a3.Action = act3_8 and a4.Action = act1_9);
+		(imp_s1_s6 = true ) if (Environment.s4 = true )and (imp_s1_s6 = false )and (a0.Action = act2_20 and a1.Action = act2_21 and a2.Action = act0_22 and a3.Action = act6_23 and a4.Action = act0_24);
+		(imp_s1_s6 = true ) if (Environment.s5 = true )and (imp_s1_s6 = false )and (a0.Action = act2_50 and a1.Action = act0_51 and a2.Action = act2_52 and a3.Action = act3_53 and a4.Action = act0_54);
+		(imp_s1_s6 = true ) if (imp_s1_s6 = true )and (a0.Action = act2_105 and a1.Action = act0_106 and a2.Action = act2_107 and a3.Action = act7_108 and a4.Action = act0_109);
+		(imp_s1_s6 = true ) if (Environment.s3 = true )and (imp_s1_s6 = false )and (a0.Action = act0_135 and a1.Action = act7_136 and a2.Action = act0_137 and a3.Action = act3_138 and a4.Action = act1_139);
+		(imp_s1_s6 = true ) if (Environment.s2 = true )and (imp_s1_s6 = false )and (a0.Action = act2_155 and a1.Action = act3_156 and a2.Action = act1_157 and a3.Action = act5_158 and a4.Action = act0_159);
+		(imp_s1_s6 = true ) if (Environment.s8 = true )and (imp_s1_s6 = false )and (a0.Action = act1_180 and a1.Action = act4_181 and a2.Action = act0_182 and a3.Action = act1_183 and a4.Action = act1_184);
+		(imp_s1_s6 = true ) if (Environment.s0 = true )and (imp_s1_s6 = false )and (a0.Action = act2_225 and a1.Action = act3_226 and a2.Action = act1_227 and a3.Action = act2_228 and a4.Action = act0_229);
+		(imp_s1_s6 = true ) if (Environment.s8 = true )and (imp_s1_s6 = false )and (a0.Action = act0_240 and a1.Action = act0_241 and a2.Action = act2_242 and a3.Action = act1_243 and a4.Action = act0_244);
+		(imp_s1_s6 = true ) if (Environment.s3 = true )and (imp_s1_s6 = false )and (a0.Action = act0_250 and a1.Action = act2_251 and a2.Action = act0_252 and a3.Action = act4_253 and a4.Action = act1_254);
+		(imp_s1_s6 = true ) if (Environment.s0 = true )and (imp_s1_s6 = false )and (a0.Action = act2_300 and a1.Action = act2_301 and a2.Action = act2_302 and a3.Action = act0_303 and a4.Action = act1_304);
+		(imp_s1_s6 = true ) if (Environment.s3 = true )and (imp_s1_s6 = false )and (a0.Action = act2_320 and a1.Action = act5_321 and a2.Action = act1_322 and a3.Action = act2_323 and a4.Action = act0_324);
+	end Evolution
+end Agent
+Agent a3
+	Lobsvars = {s0, s1, s3, s4, s6, s7, s8, s9};
+	Vars : 
+		imp_s2_s5: boolean;
+		play : boolean;
+	end Vars
+	Actions = {act6_3,act3_8,act0_13,act5_18,act6_23,act4_28,act3_33,act0_38,act5_43,act1_48,act3_53,act4_58,act0_63,act1_68,act1_73,act0_78,act7_83,act0_88,act7_93,act0_98,act0_103,act7_108,act4_113,act5_118,act2_123,act6_128,act7_133,act3_138,act6_143,act6_148,act1_153,act5_158,act3_163,act0_168,act1_173,act5_178,act1_183,act4_188,act2_193,act6_198,act0_203,act2_208,act4_213,act7_218,act4_223,act2_228,act2_233,act4_238,act1_243,act0_248,act4_253,act5_258,act0_263,act7_268,act0_273,act7_278,act1_283,act5_288,act3_293,act3_298,act0_303,act2_308,act6_313,act6_318,act2_323,act6_328,act7_333,act2_338,act0_343,act7_348,act6_353,act6_358,act3_363,act2_368,act6_373,act1_378,act5_383,act7_388,act3_393};
+	Protocol : 
+		Environment.s3 = true : {act5_18,act3_138,act2_208,act4_223,act4_253,act3_298,act2_323,act6_328,act7_348};
+		Environment.s4 = true : {act6_23,act0_103,act1_153,act3_163};
+		Environment.s6 = true : {act3_33,act7_108,act3_293,act2_338,act3_363,act6_373};
+		Environment.s7 = true : {act0_38,act2_123,act4_188,act0_203};
+		Environment.s8 = true : {act5_43,act4_58,act0_78,act0_88,act0_98,act1_183,act2_233,act1_243,act5_288,act2_308,act6_313,act7_388};
+		Environment.s9 = true : {act1_48,act1_68,act1_73,act4_113,act6_128,act6_148,act6_198,act4_213,act6_353,act5_383};
+		imp_s2_s5 = true : {act0_13,act4_28,act3_53,act0_63,act7_93,act6_143,act5_158,act1_173,act2_193,act7_218,act4_238,act0_248,act5_258,act7_278,act1_283,act7_333,act2_368,act1_378};
+		Environment.s0 = true : {act6_3,act7_83,act5_118,act0_168,act2_228,act0_263,act0_303,act6_318,act0_343,act6_358,act3_393};
+		Environment.s1 = true : {act3_8,act7_133,act5_178,act7_268,act0_273};
+	end Protocol
+	Evolution : 
+		play = true if play = true;
+		(imp_s2_s5 = true ) if (Environment.s0 = true )and (imp_s2_s5 = false )and (a0.Action = act2_0 and a1.Action = act5_1 and a2.Action = act0_2 and a3.Action = act6_3 and a4.Action = act0_4);
+		(imp_s2_s5 = true ) if (Environment.s9 = true )and (imp_s2_s5 = false )and (a0.Action = act0_65 and a1.Action = act3_66 and a2.Action = act1_67 and a3.Action = act1_68 and a4.Action = act1_69);
+		(imp_s2_s5 = true ) if (Environment.s8 = true )and (imp_s2_s5 = false )and (a0.Action = act2_75 and a1.Action = act0_76 and a2.Action = act0_77 and a3.Action = act0_78 and a4.Action = act1_79);
+		(imp_s2_s5 = true ) if (Environment.s8 = true )and (imp_s2_s5 = false )and (a0.Action = act0_85 and a1.Action = act7_86 and a2.Action = act2_87 and a3.Action = act0_88 and a4.Action = act0_89);
+		(imp_s2_s5 = true ) if (Environment.s7 = true )and (imp_s2_s5 = false )and (a0.Action = act2_120 and a1.Action = act3_121 and a2.Action = act1_122 and a3.Action = act2_123 and a4.Action = act1_124);
+		(imp_s2_s5 = true ) if (Environment.s4 = true )and (imp_s2_s5 = false )and (a0.Action = act1_150 and a1.Action = act0_151 and a2.Action = act0_152 and a3.Action = act1_153 and a4.Action = act0_154);
+		(imp_s2_s5 = true ) if (Environment.s3 = true )and (imp_s2_s5 = false )and (a0.Action = act0_205 and a1.Action = act5_206 and a2.Action = act0_207 and a3.Action = act2_208 and a4.Action = act1_209);
+		(imp_s2_s5 = true ) if (imp_s2_s5 = true )and (a0.Action = act2_255 and a1.Action = act2_256 and a2.Action = act1_257 and a3.Action = act5_258 and a4.Action = act1_259);
+		(imp_s2_s5 = true ) if (Environment.s0 = true )and (imp_s2_s5 = false )and (a0.Action = act1_260 and a1.Action = act1_261 and a2.Action = act1_262 and a3.Action = act0_263 and a4.Action = act0_264);
+		(imp_s2_s5 = true ) if (imp_s2_s5 = true )and (a0.Action = act1_275 and a1.Action = act5_276 and a2.Action = act2_277 and a3.Action = act7_278 and a4.Action = act0_279);
+		(imp_s2_s5 = true ) if (imp_s2_s5 = true )and (a0.Action = act0_280 and a1.Action = act4_281 and a2.Action = act1_282 and a3.Action = act1_283 and a4.Action = act0_284);
+		(imp_s2_s5 = true ) if (Environment.s6 = true )and (imp_s2_s5 = false )and (a0.Action = act1_290 and a1.Action = act6_291 and a2.Action = act2_292 and a3.Action = act3_293 and a4.Action = act0_294);
+		(imp_s2_s5 = true ) if (Environment.s8 = true )and (imp_s2_s5 = false )and (a0.Action = act1_305 and a1.Action = act3_306 and a2.Action = act2_307 and a3.Action = act2_308 and a4.Action = act1_309);
+		(imp_s2_s5 = true ) if (imp_s2_s5 = true )and (a0.Action = act2_330 and a1.Action = act1_331 and a2.Action = act2_332 and a3.Action = act7_333 and a4.Action = act0_334);
+		(imp_s2_s5 = true ) if (Environment.s0 = true )and (imp_s2_s5 = false )and (a0.Action = act1_340 and a1.Action = act1_341 and a2.Action = act1_342 and a3.Action = act0_343 and a4.Action = act0_344);
+		(imp_s2_s5 = true ) if (Environment.s6 = true )and (imp_s2_s5 = false )and (a0.Action = act1_360 and a1.Action = act2_361 and a2.Action = act2_362 and a3.Action = act3_363 and a4.Action = act0_364);
+		(imp_s2_s5 = true ) if (Environment.s6 = true )and (imp_s2_s5 = false )and (a0.Action = act0_370 and a1.Action = act1_371 and a2.Action = act2_372 and a3.Action = act6_373 and a4.Action = act1_374);
+	end Evolution
+end Agent
+Agent a4
+	Lobsvars = {s0, s2, s4, s5, s6, s7, s8, s9};
+	Vars : 
+		imp_s3_s1: boolean;
+		play : boolean;
+	end Vars
+	Actions = {act0_4,act1_9,act1_14,act1_19,act0_24,act0_29,act1_34,act0_39,act0_44,act0_49,act0_54,act0_59,act1_64,act1_69,act1_74,act1_79,act1_84,act0_89,act0_94,act0_99,act0_104,act0_109,act0_114,act1_119,act1_124,act1_129,act0_134,act1_139,act0_144,act1_149,act0_154,act0_159,act1_164,act1_169,act0_174,act0_179,act1_184,act1_189,act1_194,act1_199,act1_204,act1_209,act0_214,act0_219,act0_224,act0_229,act0_234,act1_239,act0_244,act0_249,act1_254,act1_259,act0_264,act1_269,act0_274,act0_279,act0_284,act1_289,act0_294,act1_299,act1_304,act1_309,act1_314,act0_319,act0_324,act0_329,act0_334,act0_339,act0_344,act1_349,act0_354,act0_359,act0_364,act0_369,act1_374,act1_379,act1_384,act0_389,act1_394};
+	Protocol : 
+		Environment.s4 = true : {act0_24,act0_104,act0_154,act1_164};
+		Environment.s5 = true : {act0_29,act0_54,act1_64,act0_94,act0_144,act1_194,act0_219,act0_279,act0_284,act0_334,act0_369,act1_379};
+		Environment.s6 = true : {act1_34,act0_109,act0_294,act0_339,act0_364,act1_374};
+		Environment.s7 = true : {act0_39,act1_124,act1_189,act1_204};
+		Environment.s8 = true : {act0_44,act0_59,act1_79,act0_89,act0_99,act1_184,act0_234,act0_244,act1_289,act1_309,act1_314,act0_389};
+		Environment.s9 = true : {act0_49,act1_69,act1_74,act0_114,act1_129,act1_149,act1_199,act0_214,act0_354,act1_384};
+		Environment.s0 = true : {act0_4,act1_84,act1_119,act1_169,act0_229,act0_264,act1_304,act0_319,act0_344,act0_359,act1_394};
+		imp_s3_s1 = true : {act1_9,act1_19,act0_134,act1_139,act0_179,act1_209,act0_224,act1_254,act1_269,act0_274,act1_299,act0_324,act0_329,act1_349};
+		Environment.s2 = true : {act1_14,act0_159,act0_174,act1_239,act0_249,act1_259};
+	end Protocol
+	Evolution : 
+		play = true if play = true;
+		(imp_s3_s1 = true ) if (imp_s3_s1 = true )and (a0.Action = act1_5 and a1.Action = act6_6 and a2.Action = act2_7 and a3.Action = act3_8 and a4.Action = act1_9);
+		(imp_s3_s1 = true ) if (Environment.s9 = true )and (imp_s3_s1 = false )and (a0.Action = act2_70 and a1.Action = act5_71 and a2.Action = act0_72 and a3.Action = act1_73 and a4.Action = act1_74);
+		(imp_s3_s1 = true ) if (Environment.s4 = true )and (imp_s3_s1 = false )and (a0.Action = act0_100 and a1.Action = act1_101 and a2.Action = act1_102 and a3.Action = act0_103 and a4.Action = act0_104);
+		(imp_s3_s1 = true ) if (Environment.s6 = true )and (imp_s3_s1 = false )and (a0.Action = act2_105 and a1.Action = act0_106 and a2.Action = act2_107 and a3.Action = act7_108 and a4.Action = act0_109);
+		(imp_s3_s1 = true ) if (Environment.s9 = true )and (imp_s3_s1 = false )and (a0.Action = act2_110 and a1.Action = act7_111 and a2.Action = act2_112 and a3.Action = act4_113 and a4.Action = act0_114);
+		(imp_s3_s1 = true ) if (imp_s3_s1 = true )and (a0.Action = act0_130 and a1.Action = act0_131 and a2.Action = act2_132 and a3.Action = act7_133 and a4.Action = act0_134);
+		(imp_s3_s1 = true ) if (Environment.s5 = true )and (imp_s3_s1 = false )and (a0.Action = act1_140 and a1.Action = act2_141 and a2.Action = act0_142 and a3.Action = act6_143 and a4.Action = act0_144);
+		(imp_s3_s1 = true ) if (Environment.s2 = true )and (imp_s3_s1 = false )and (a0.Action = act2_155 and a1.Action = act3_156 and a2.Action = act1_157 and a3.Action = act5_158 and a4.Action = act0_159);
+		(imp_s3_s1 = true ) if (Environment.s8 = true )and (imp_s3_s1 = false )and (a0.Action = act1_180 and a1.Action = act4_181 and a2.Action = act0_182 and a3.Action = act1_183 and a4.Action = act1_184);
+		(imp_s3_s1 = true ) if (Environment.s7 = true )and (imp_s3_s1 = false )and (a0.Action = act2_200 and a1.Action = act4_201 and a2.Action = act2_202 and a3.Action = act0_203 and a4.Action = act1_204);
+		(imp_s3_s1 = true ) if (Environment.s0 = true )and (imp_s3_s1 = false )and (a0.Action = act2_225 and a1.Action = act3_226 and a2.Action = act1_227 and a3.Action = act2_228 and a4.Action = act0_229);
+		(imp_s3_s1 = true ) if (Environment.s2 = true )and (imp_s3_s1 = false )and (a0.Action = act2_235 and a1.Action = act7_236 and a2.Action = act2_237 and a3.Action = act4_238 and a4.Action = act1_239);
+		(imp_s3_s1 = true ) if (Environment.s8 = true )and (imp_s3_s1 = false )and (a0.Action = act0_240 and a1.Action = act0_241 and a2.Action = act2_242 and a3.Action = act1_243 and a4.Action = act0_244);
+		(imp_s3_s1 = true ) if (imp_s3_s1 = true )and (a0.Action = act0_250 and a1.Action = act2_251 and a2.Action = act0_252 and a3.Action = act4_253 and a4.Action = act1_254);
+		(imp_s3_s1 = true ) if (imp_s3_s1 = true )and (a0.Action = act1_265 and a1.Action = act4_266 and a2.Action = act0_267 and a3.Action = act7_268 and a4.Action = act1_269);
+		(imp_s3_s1 = true ) if (Environment.s8 = true )and (imp_s3_s1 = false )and (a0.Action = act2_285 and a1.Action = act6_286 and a2.Action = act2_287 and a3.Action = act5_288 and a4.Action = act1_289);
+		(imp_s3_s1 = true ) if (Environment.s0 = true )and (imp_s3_s1 = false )and (a0.Action = act0_315 and a1.Action = act3_316 and a2.Action = act2_317 and a3.Action = act6_318 and a4.Action = act0_319);
+		(imp_s3_s1 = true ) if (imp_s3_s1 = true )and (a0.Action = act1_345 and a1.Action = act4_346 and a2.Action = act2_347 and a3.Action = act7_348 and a4.Action = act1_349);
+		(imp_s3_s1 = true ) if (Environment.s0 = true )and (imp_s3_s1 = false )and (a0.Action = act2_355 and a1.Action = act7_356 and a2.Action = act1_357 and a3.Action = act6_358 and a4.Action = act0_359);
+	end Evolution
+end Agent
+Evaluation
+	s7 if (Environment.s7 = true);
+	end Evaluation
+	InitStates
+		Environment.s0 = false and 
+		Environment.s1 = false and 
+		Environment.s2 = false and 
+		Environment.s3 = true and 
+		Environment.s4 = false and 
+		Environment.s5 = false and 
+		Environment.s6 = false and 
+		Environment.s7 = false and 
+		Environment.s8 = false and 
+		Environment.s9 = false and 
+		a0.imp_s8_s7 = false and 
+		a1.imp_s0_s2 = false and 
+		a2.imp_s1_s6 = false and 
+		a3.imp_s2_s5 = false and 
+		a4.imp_s3_s1 = true;
+	end InitStates
+Groups
+	g={a0};
+end Groups
+Formulae
+	<g>F(s7);
+end Formulae
